@@ -1,4 +1,4 @@
-<img alt="React Vite Tailwind Boilerplate" src="" />
+https://user-images.githubusercontent.com/45815512/236550338-67e84782-6ff0-4e60-8d49-f11513b0ba05.mp4
 
 # React Vite Tailwind Boilerplate
 
