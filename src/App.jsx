@@ -1,18 +1,25 @@
-import { useState } from 'react'
+import {
+  AddTransaction,
+  Balance,
+  Header,
+  IncomeExpenses,
+  TransactionList,
+} from './components'
+import { GlobalProvider } from './context/globalState'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center mx-auto p-6 dark:text-white text-2xl font-bold">
-      <h1 className="text-3xl font-bold underline">Vite + React</h1>
-      <button
-        className="mt-5 bg-blue-500 border-blue-500 p-2 rounded-md"
-        onClick={() => setCount((count) => count + 1)}
-      >
-        count is {count}
-      </button>
-    </div>
+    <GlobalProvider>
+      <div className="w-full min-h-screen h-auto flex flex-col justify-center items-center mx-auto p-6 text-2xl font-bold">
+        <Header />
+        <div className="flex flex-col justify-start items-center bg-white rounded-lg p-3">
+          <Balance />
+          <IncomeExpenses />
+          <TransactionList />
+          <AddTransaction />
+        </div>
+      </div>
+    </GlobalProvider>
   )
 }
 
